@@ -73,6 +73,63 @@ function App() {
       </header>
 
       <main className="main-content">
+        {/* Thông tin nhóm */}
+        <section className="team-section">
+          <div className="team-heading">
+            <div className="team-icon">✦</div>
+
+            <div>
+              <p className="team-eyebrow">TEAM INFORMATION</p>
+              <h2>Thông tin nhóm 15</h2>
+              <p className="team-description">
+                Danh sách thành viên thực hiện bài tập.
+              </p>
+            </div>
+          </div>
+
+          <div className="table-wrapper team-table-wrapper">
+            <table className="user-table team-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Họ và tên thành viên</th>
+                  <th>Nhóm</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>
+                    <div className="table-user-name">
+                      <div className="avatar">U</div>
+                      Nguyễn Thị Hoàng Uyên
+                    </div>
+                  </td>
+                  <td>
+                    <span className="country-tag">Nhóm 15</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>02</td>
+                  <td>
+                    <div className="table-user-name">
+                      <div className="avatar member-avatar-pink">T</div>
+                      Võ Thị Kiều Thơ
+                    </div>
+                  </td>
+                  <td>
+                    <span className="country-tag">Nhóm 15</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Tiêu đề quản lý người dùng */}
+        <section className="page-heading"></section>
         <section className="page-heading">
           <div>
             <p className="eyebrow">DASHBOARD / USERS</p>
