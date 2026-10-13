@@ -15,6 +15,7 @@ function App() {
   const [viewMode, setViewMode] = useState("table");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [showImages, setShowImages] = useState(false);
 
   useEffect(() => {
     async function fetchUsers() {
@@ -126,6 +127,49 @@ function App() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* Nút xem hình ảnh */}
+        <section className="image-gallery-section">
+          <button
+            type="button"
+            className="gallery-toggle-button"
+            onClick={() => setShowImages((prev) => !prev)}
+            aria-expanded={showImages}
+          >
+            <span>{showImages ? "▴" : "▾"}</span>
+            {showImages ? "Thu gọn hình ảnh" : "Xem hình ảnh minh họa"}
+          </button>
+
+          {showImages && (
+            <div className="image-gallery">
+              <div className="gallery-heading">
+                <h3>Hình ảnh thực hiện bài tập</h3>
+                <p>Ảnh chụp màn hình mã nguồn trong VS Code.</p>
+              </div>
+
+              <div className="gallery-grid">
+                {[1, 2, 3, 4].map((number) => (
+                  <figure className="gallery-card" key={number}>
+                    <a
+                      href={`/images/code-${number}.png`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={`/images/code-${number}.png`}
+                        alt={`Ảnh chụp mã nguồn ${number}`}
+                        loading="lazy"
+                      />
+                    </a>
+                    <figcaption>
+                      Hình {number} — Mã nguồn bài tập
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Tiêu đề quản lý người dùng */}

@@ -626,3 +626,94 @@ button {
     font-size: 9px;
   }
 }
+
+/* Khu vực hình ảnh nhóm */
+.image-gallery-section {
+  margin: 20px 0 32px;
+}
+
+.gallery-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid #d8ccff;
+  border-radius: 12px;
+  background: #f5f1ff;
+  color: #6844c6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gallery-toggle-button:hover {
+  background: #eae1ff;
+  transform: translateY(-1px);
+}
+
+.gallery-heading {
+  margin: 22px 0 16px;
+}
+
+.gallery-heading h3 {
+  margin: 0 0 6px;
+  color: #25324b;
+  font-size: 20px;
+}
+
+.gallery-heading p {
+  margin: 0;
+  color: #778198;
+  font-size: 14px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.gallery-card {
+  margin: 0;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid #e4e7ef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(35, 45, 75, 0.05);
+}
+
+.gallery-card a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.gallery-card a:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-card figcaption {
+  padding: 12px 2px 2px;
+  color: #536078;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-toggle-button {
+    width: 100%;
+  }
+}
